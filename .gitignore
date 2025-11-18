@@ -1,4 +1,10 @@
+# Ignore all folders
 **/
 __pycache__/
+
+# Ignore all input files
 **/*.dat
+
+# Ignore the parameter file, which might be changed
+parameters.py
 
