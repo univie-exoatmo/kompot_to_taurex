@@ -5,6 +5,3 @@ __pycache__/
 # Ignore all input files
 **/*.dat
 
-# Ignore the parameter file, which might be changed
-parameters.py
-
