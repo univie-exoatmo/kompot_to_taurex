@@ -4,6 +4,7 @@ This small rotutine creates transmission spectra from Kompot output files, using
 Most things happen automatically in this, but there are some parameters that can be specified in the `parameters.py` file.
 
 ## Required input
+- `GASES`: A list of gases to extract from the Kompot simulation.
 - `PROJECT_NAME`: Specifies the name of the output folder.
 - `THERMAL_PROP`: Fully pathed `ThermalProperties.dat` file.
 - `SPECIES_PROP`: Fully pather `species_densities.dat` file.
@@ -13,5 +14,7 @@ Most things happen automatically in this, but there are some parameters that can
 ## Optional things
 Adding the flag `-t` (`--taurex`) will automatically run TauREx3 after making the parameter file. Requires a local TauREx3 installation.
 
+
+**Note:** For now, extracting helium needs the label `HE`, which is hardcoded to be translated into `He` within the script.
 
 **Note:** Something funky is going on with hot, rocky exoplanets (e.g. some cases Ivan shared with me). BE AWARE!

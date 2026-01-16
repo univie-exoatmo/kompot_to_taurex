@@ -13,6 +13,12 @@ import parameters as pars
 def replace_taurex_parameter(
         parfile: str, parname: str, parvalue: tp.Any
 ) -> str:
+    # I need to catch "HE" in Kompot actually being "He" in TauREx
+    if parname == "gases":
+        temp_list = np.asarray(parvalue.replace(" ", "").split(","))
+        temp_list[temp_list == "HE"] = "He"
+        parvalue = ", ".join(list(temp_list))
+    
     custom_parfile = re.sub(
         rf"\b{parname}\s*[^#\n]+", f"{parname} = {parvalue}", parfile
     )
